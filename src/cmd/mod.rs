@@ -47,14 +47,14 @@ pub fn execute(matches: &ArgMatches) -> ExecResult {
 
     match matches.subcommand() {
         ("server", Some(sub_m)) => server_cmd(sub_m, storage_ctrl.clone(), chain),
-        ("account", Some(sub_m)) => account_cmd(sub_m, keystore, &env),
-        ("transaction", Some(sub_m)) => transaction_cmd(sub_m, keystore, &env, chain),
-        ("balance", Some(sub_m)) => balance_cmd(sub_m),
-        ("mnemonic", Some(_)) => mnemonic_cmd(),
-        ("nonce", Some(sub_m)) => nonce_cmd(sub_m),
-        _ => Err(Error::ExecError(
-            "No command selected. Use `-h` for help".to_string(),
-        )),
+        // ("account", Some(sub_m)) => account_cmd(sub_m, keystore, &env),
+        // ("transaction", Some(sub_m)) => transaction_cmd(sub_m, keystore, &env, chain),
+        // ("balance", Some(sub_m)) => balance_cmd(sub_m),
+        // ("mnemonic", Some(_)) => mnemonic_cmd(),
+        // ("nonce", Some(sub_m)) => nonce_cmd(sub_m),
+        // _ => Err(Error::ExecError(
+        //     "No command selected. Use `-h` for help".to_string(),
+        // )),
     }
 }
 
